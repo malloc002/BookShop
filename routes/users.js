@@ -3,9 +3,25 @@ const router = express.Router();
 
 router.use(express.json());
 
+const conn = require('../mariadb')
+
 //회원가입
 router.post('/join', function(req, res){
+    const {email, password} = req.body;
 
+    let sql = "INSERT INTO users (email, password) VALUES (?, ?)";
+    values = [email, password];
+    conn.query(sql, values, 
+        function(err, results){
+            if(err)
+            {
+                res.status(400).json(err); // 400: bad request
+                return;
+            }
+
+            res.status(201).json(results);
+        }
+    );
 });
 
 //로그인
