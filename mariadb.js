@@ -9,7 +9,7 @@ const connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: process.env.DB_PWD,
-    database: 'youtube',
+    database: 'bookshop',
     dateStrings: true
 })
 
