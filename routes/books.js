@@ -1,5 +1,5 @@
 const express = require('express');
-const router = express.Router();  //혜민사랑해
+const router = express.Router();
 
 router.use(express.json());
 
