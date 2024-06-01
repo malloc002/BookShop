@@ -12,7 +12,7 @@ const userRouter = require('./routes/users');
 const bookRouter = require('./routes/books');
 const categoryRouter = require('./routes/category');
 const likeRouter = require('./routes/likes');
-const cartRouter = require('./routes/carts');
+const cartRouter = require('./routes/cartItems');
 const orderRouter = require('./routes/orders');
 
 app.use("/users", userRouter);
