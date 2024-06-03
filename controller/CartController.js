@@ -5,7 +5,6 @@ const {StatusCodes} = require('http-status-codes'); //status code 모듈
 const addCart = (req, res) => {
     const {bookId, quantity, userId} = req.body;
     
-
     let sql = `INSERT INTO cart_items (book_id, quantity, user_id) VALUES (?, ?, ?);`;
     let values = [bookId, quantity, userId];
     conn.query(sql, values,
