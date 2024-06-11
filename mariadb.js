@@ -5,12 +5,12 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 //DB와 연결 통로 생성
-const connection = {
+const connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: process.env.DB_PWD,
     database: 'bookshop',
     dateStrings: true
-};
+});
 
-module.exports = connection
+module.exports = connection;
