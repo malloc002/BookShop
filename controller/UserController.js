@@ -52,6 +52,7 @@ const login = function(req, res){
             {
                 //토큰 발행
                 var token = jwt.sign({ // 페이로드
+                    id: loginUser.id,
                     email: loginUser.email
                 }, process.env.PRIVATE_KEY, { //비밀키, 옵션
                     expiresIn: '3h',
