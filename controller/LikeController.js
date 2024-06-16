@@ -1,10 +1,8 @@
 const jwt = require('jsonwebtoken');
 const conn = require('../mariadb') //db 모듈
 const {StatusCodes} = require('http-status-codes'); //status code 모듈
-const dotenv = require('dotenv');
 const ensureAuthorization = require('../auth'); //인증 모듈
 
-dotenv.config();
 
 //좋아요 추가
 const addLike = (req, res) => {
